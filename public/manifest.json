@@ -1,0 +1,19 @@
+{
+  "name": "Ma Bulle Marutea",
+  "short_name": "Marutea",
+  "description": "Votre sanctuaire bien-être de poche",
+  "theme_color": "#064e3b",
+  "background_color": "#FCFBF7",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
