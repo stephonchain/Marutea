@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #F5F0E8;
+  --color-sand: #C8B89A;
+  --color-sage: #7A8C72;
+  --color-terra: #C4876A;
+  --color-dark: #2C2419;
+  --font-display: 'Playlist', cursive;
+  --font-body: 'Okomito', sans-serif;
+}
+
+@font-face {
+  font-family: 'Playlist';
+  src: url('/fonts/Playlist.woff2') format('woff2'),
+       url('/fonts/Playlist.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Regular.woff2') format('woff2'),
+       url('/fonts/Okomito-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Medium.woff2') format('woff2'),
+       url('/fonts/Okomito-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Bold.woff2') format('woff2'),
+       url('/fonts/Okomito-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-cream);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
