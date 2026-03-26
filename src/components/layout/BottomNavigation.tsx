@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { Home, Sparkles, BookHeart, Flower2 } from 'lucide-react'
+import { Home, Sparkles, BookHeart, Flower2, ShoppingBag } from 'lucide-react'
 
 export function BottomNavigation() {
   const navItems = [
@@ -7,6 +7,7 @@ export function BottomNavigation() {
     { to: '/journal', icon: BookHeart, label: 'Journal' },
     { to: '/pause', icon: Sparkles, label: '', isFab: true },
     { to: '/soins', icon: Flower2, label: 'Soins' },
+    { to: '/routine', icon: ShoppingBag, label: 'Routine' },
   ]
 
   return (
