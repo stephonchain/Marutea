@@ -1,17 +1,9 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = ".next"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[headers]]
-  for = "/sw.js"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-    Service-Worker-Allowed = "/"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
