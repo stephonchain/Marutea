@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Fonts locales (RGPD + perfs) — déposer les fichiers dans /public/fonts :
+  - Playlist-Script.woff2  (display / titres)
+  - Okomito-Regular.woff2, Okomito-Medium.woff2, Okomito-Bold.woff2 (corps)
+*/
+@font-face {
+  font-family: 'Playlist';
+  src: url('/fonts/Playlist-Script.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Okomito';
+  src: url('/fonts/Okomito-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-cream: #F5F0E8;
+  --color-sand: #C8B89A;
+  --color-sage: #7A8C72;
+  --color-terra: #C4876A;
+  --color-dark: #2C2419;
+  --font-display: 'Playlist', cursive;
+  --font-body: 'Okomito', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-dark font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-content px-6 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-sage text-cream hover:bg-dark;
+  }
+
+  .btn-secondary {
+    @apply btn bg-terra text-cream hover:bg-dark;
+  }
+
+  .btn-outline {
+    @apply btn border border-dark/30 text-dark hover:border-dark hover:bg-dark hover:text-cream;
+  }
+
+  .input-site {
+    @apply w-full rounded-xl border border-sand/60 bg-white/70 px-4 py-3 text-dark placeholder:text-dark/40 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage;
+  }
+
+  .prose-marutea {
+    @apply text-dark/80 leading-relaxed;
+  }
+
+  .prose-marutea h2 {
+    @apply mb-4 mt-10 text-3xl text-dark;
+  }
+
+  .prose-marutea h3 {
+    @apply mb-3 mt-8 text-2xl text-dark;
+  }
+
+  .prose-marutea p {
+    @apply mb-4;
+  }
+
+  .prose-marutea ul {
+    @apply mb-4 list-disc space-y-1 pl-6;
+  }
+}
